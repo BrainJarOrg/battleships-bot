@@ -37,7 +37,7 @@ It consists of a run.sh and the source code in one of the following languages
 
 This is the script we will call, which has to run properly your thing. You need to adapt it to the language you are going to use.
 
-You can check examples https://github.com/BrainJar/battleships-bot/blob/master/
+You can check examples https://github.com/BrainJar/battleships-bot/blob/master/run.sh
 
 
 #### Code
