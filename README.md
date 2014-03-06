@@ -66,6 +66,7 @@ Easy. Just run your script using one of the interpreters:
     #   javascript      ex. 'node bot.js $1'
     #   python          ex. 'python bot.py $1'
     #   perl            ex. 'perl bot.pl $1'
+    #   ruby            ex. 'ruby bot.rb $1'
     #   PHP             ex. 'php bot.php $1'
 
 ### Source code
