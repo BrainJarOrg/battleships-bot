@@ -61,6 +61,7 @@ Please note that if you violate any of these, your bot will just keep getting be
 ### run.sh
 
 Easy. Just run your script using one of the interpreters:
+
     #   coffeescript    ex. 'coffee bot.coffee $1'
     #   javascript      ex. 'node bot.js $1'
     #   python          ex. 'python bot.py $1'
