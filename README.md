@@ -1,8 +1,8 @@
-# Brainjar.org - Battleships 
+# Brainjar.org - Battleships bot
 
 ![alt text](https://raw.github.com/BrainJar/battleships/master/resources/brainjar_org_logo_200.png "Logo Brainjar.org")
 
-This is a simple bot to play [https://brainjar.org/battleships](https://brainjar.org/battleships)
+A simple bot to play [https://brainjar.org/battleships](https://brainjar.org/battleships)
 
 
 ## What's here ?
@@ -19,6 +19,8 @@ Start with reading the rules https://github.com/BrainJar/battleships#rules-of-th
 
 ### 2. Fork this repository
 
+It's easy: https://github.com/BrainJar/battleships-bot/fork
+
 ### 3. Hack your bot
 
 A Battleships bot is a very simple creature.
@@ -30,6 +32,29 @@ It consists of a run.sh and the source code in one of the following languages
 - ruby
 - perl
 - PHP
+
+#### run.sh
+
+This is the script we will call, which has to run properly your thing. You need to adapt it to the language you are going to use.
+
+You can check examples https://github.com/BrainJar/battleships-bot/blob/master/
+
+
+#### Code
+
+You can code however you like as long as you follow the rules below. Third-party code is ok, as long as it doesn't violate any licences and is clearly stated in your README.md
+
+#### Few rules
+
+- bots are self-contained - all necessary code is in the repository
+- bots are stateless - no storage is available, and don't have a memory between moves
+- bots don't browse internet - your sandbox is isolated
+- bots are slim - you have max 2MB for the code
+- bots are short - your sandbox has 256 MB of RAM, so be reasonable
+- bots are quick - timeout .75s per move
+- bots play fair - if your code uses other people's code, state it clearly in your README.md
+
+Please note that if you violate any of these, your bot will just keep getting beaten up. Be nice to your bot.
 
 ## HOWTO
 
