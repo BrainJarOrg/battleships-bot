@@ -60,10 +60,16 @@ Please note that if you violate any of these, your bot will just keep getting be
 
 ### run.sh
 
+Easy. Just run your script using one of the interpreters:
+    #   coffeescript    ex. 'coffee bot.coffee $1'
+    #   javascript      ex. 'node bot.js $1'
+    #   python          ex. 'python bot.py $1'
+    #   perl            ex. 'perl bot.pl $1'
+    #   PHP             ex. 'php bot.php $1'
 
 ### Source code
 
-#### Begginning of the game
+#### Beginning of the game
 
 ##### Request for the init config
 
