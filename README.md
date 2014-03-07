@@ -7,7 +7,8 @@ A simple bot to play [https://brainjar.org/battleships](https://brainjar.org/bat
 
 ## What's here ?
 
-This is a template to get you started quickly.
+This is a sandbox,
+test robot.
 
 ## How to play
 
