@@ -26,13 +26,14 @@ It's easy: https://github.com/BrainJar/battleships-bot/fork
 
 A Battleships bot is a very simple creature.
 
-It consists of a run.sh and the source code in one of the following languages
-- coffeescript
-- javascript
-- python
-- ruby
-- perl
-- PHP
+It consists of a run.sh and the source code in one of the following languages:
+- Coffeescript 1.7.1
+- Java 7 (/!\ in this case you need to provide a jar file... and be careful with RAM and timeouts! ;-))
+- Javascript (Node.js) 0.10.2
+- PHP 5.3.10
+- Perl 5.14.2
+- Python 2.7.3
+- Ruby 1.8.7
 
 #### run.sh
 
@@ -52,7 +53,7 @@ You can code however you like as long as you follow the rules below. Third-party
 - bots don't browse internet - your sandbox is isolated
 - bots are slim - you have max 2MB for the code
 - bots are short - your sandbox has 256 MB of RAM, so be reasonable
-- bots are quick - timeout .75s per move
+- bots are quick - timeout 2s per move
 - bots play fair - if your code uses other people's code, state it clearly in your README.md
 
 Please note that if you violate any of these, your bot will just keep getting beaten up. Be nice to your bot.

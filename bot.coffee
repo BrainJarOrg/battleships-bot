@@ -53,4 +53,5 @@ else
   move = randomMove()
   while (move in incoming.hit) or (move in incoming.missed)
     move = randomMove()
-  console.log JSON.stringify move
+  console.log JSON.stringify
+    move: move
