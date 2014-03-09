@@ -55,3 +55,4 @@ else
     move = randomMove()
   console.log JSON.stringify
     move: move
+  process.exit 0
