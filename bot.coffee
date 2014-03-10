@@ -18,7 +18,7 @@ if state.cmd is 'init'
   diff = 0
   config = {}
   for i in [2..5]
-    diff = diff + rand(1)
+    diff = diff + 1 + rand(1)
     config[i] =
       point: "#{rand(7-i)}#{diff}"
       orientation: "horizontal"
