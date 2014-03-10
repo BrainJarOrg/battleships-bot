@@ -12,3 +12,7 @@ logs
 results
 
 npm-debug.log
+node_modules
+
+.local.raw.github.com.brainjar.battleships.coffee
+.local.raw.github.com.brainjar.battleships-bot.coffee

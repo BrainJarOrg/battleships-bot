@@ -35,6 +35,26 @@ It consists of a run.sh and the source code in one of the following languages:
 - Python 2.7.3
 - Ruby 1.8.7
 
+### 4. Test it locally, before the fight
+
+To run your bot (with run.sh ready) you will need node.js and coffee-script installed.
+
+
+    npm install
+    coffee simulate.coffee --help
+
+    Usage: simulate.coffee [options]
+
+        Options:
+
+        -h, --help       output usage information
+        -V, --version    output the version number
+        -n, --norefresh  doesn't download the game engine and random bot [false]
+        -v, --verbose    verbose mode [false]
+
+It's goting to download the game engine and a bot template, and play against your local bot. Yeah ! :-)
+
+
 #### run.sh
 
 This is the script we will call, which has to run properly your thing. You need to adapt it to the language you are going to use.
