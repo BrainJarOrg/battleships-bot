@@ -7,7 +7,8 @@ A simple bot to play [https://brainjar.org/battleships](https://brainjar.org/bat
 
 ## What's here ?
 
-This is a template to get you started quickly.
+This is a sandbox,
+test robot.
 
 ## How to play
 
@@ -33,6 +34,26 @@ It consists of a run.sh and the source code in one of the following languages:
 - Perl 5.14.2
 - Python 2.7.3
 - Ruby 1.8.7
+
+### 4. Test it locally, before the fight
+
+To run your bot (with run.sh ready) you will need node.js and coffee-script installed.
+
+
+    npm install
+    coffee simulate.coffee --help
+
+    Usage: simulate.coffee [options]
+
+        Options:
+
+        -h, --help       output usage information
+        -V, --version    output the version number
+        -n, --norefresh  doesn't download the game engine and random bot [false]
+        -v, --verbose    verbose mode [false]
+
+It's goting to download the game engine and a bot template, and play against your local bot. Yeah ! :-)
+
 
 #### run.sh
 

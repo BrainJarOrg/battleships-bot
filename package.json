@@ -1,0 +1,24 @@
+{
+  "name": "battleships-bot",
+  "version": "0.0.0",
+  "description": "The template for your bots",
+  "dependencies": {
+    "colors": "~0.6.2",
+    "exec-sync": "~0.1.6",
+    "commander": "~2.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "coffee simulate.coffee",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BrainJar/battleships-bot.git"
+  },
+  "author": "Mikolaj Pawlikowski mikolaj@pawlikowski.pl",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BrainJar/battleships-bot/issues"
+  }
+}
