@@ -29,11 +29,11 @@ getFreshCopies = (callback) ->
                     console.log "INFO".grey, "fetching done"
                     callback()
 
-parseJSON = (data) ->
+parseJSON = (data, player) ->
     try
         config = JSON.parse data
     catch error
-        console.log "ERROR".red, "Invalid JSON"
+        console.log "ERROR".red, "Invalid JSON, player", player
         console.log data
         process.exit 1
     config
@@ -53,33 +53,37 @@ simulate = ->
 
     bots = ["coffee #{path_battleships_bot}", "chmod +x ./run.sh && ./run.sh"]
 
-    config0 = parseJSON runBot(bots[0])
-    config1 = parseJSON runBot(bots[1])
+    config0 = parseJSON runBot(bots[0]), "local"
+    config1 = parseJSON runBot(bots[1]), "random"
 
-    if not game.setup(config0, config1)
+    error = game.setup(config0, config1)
+    if error
         console.log "ERROR".red, "Invalid config"
-        console.log "Player #{game.winner()}:".yellow
-        console.log configs[game.winner()]
+        console.log "Player #{game.winner()}".yellow
+        console.log error
         process.exit 1
 
-    gameLoop = ->
+    while not game.over()
 
-        if game.over()
-            console.log "Game over! Winner: #{game.winner()}"
-            game.debugPrint()
-            process.exit 0
-        else
-            data = runBot bots[game.player()]
-            move = JSON.parse data
+        game._print()
 
-            who = if game.player() is 0 then "local".green else "random".blue
-            console.log "Bot", who, "plays: #{data}"
+        who = if game.player() is 0 then "local".green else "random".blue
 
-            game.play move
+        data = runBot bots[game.player()]
+        move = parseJSON data, who
 
-            gameLoop()
+        console.log "Bot", who, "plays: #{data}"
 
-    gameLoop()
+        error = game.play move
+        if error
+            console.log "ERROR".red, "Invalid move"
+            console.log "Player #{who}".yellow
+            console.log error
+            process.exit 1
+
+    console.log "Game over! Winner: #{game.winner()}"
+    game._print()
+    process.exit 0
 
 if program.norefresh
     simulate()
