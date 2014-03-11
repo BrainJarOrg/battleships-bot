@@ -1,7 +1,5 @@
 #! /bin/bash
 
-# Hi! 
-# 
 # This is the place when you run your bot.
 # 
 # These are the languages you can use:
