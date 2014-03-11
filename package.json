@@ -14,19 +14,11 @@
   },
   "repository": {
     "type": "git",
-<<<<<<< HEAD
     "url": "https://github.com/BrainJar/battleships-bot.git"
-=======
-    "url": "https://github.com/seeker89/battleships-bot.git"
->>>>>>> pr/1
   },
   "author": "Mikolaj Pawlikowski mikolaj@pawlikowski.pl",
   "license": "MIT",
   "bugs": {
-<<<<<<< HEAD
     "url": "https://github.com/BrainJar/battleships-bot/issues"
-=======
-    "url": "https://github.com/seeker89/battleships-bot/issues"
->>>>>>> pr/1
   }
 }

@@ -29,19 +29,11 @@ getFreshCopies = (callback) ->
                     console.log "INFO".grey, "fetching done"
                     callback()
 
-<<<<<<< HEAD
-parseJSON = (data) ->
-    try
-        config = JSON.parse data
-    catch error
-        console.log "ERROR".red, "Invalid JSON"
-=======
 parseJSON = (data, player) ->
     try
         config = JSON.parse data
     catch error
         console.log "ERROR".red, "Invalid JSON, player", player
->>>>>>> pr/1
         console.log data
         process.exit 1
     config
@@ -60,36 +52,7 @@ simulate = ->
         answer
 
     bots = ["coffee #{path_battleships_bot}", "chmod +x ./run.sh && ./run.sh"]
-
-<<<<<<< HEAD
-    config0 = parseJSON runBot(bots[0])
-    config1 = parseJSON runBot(bots[1])
-
-    if not game.setup(config0, config1)
-        console.log "ERROR".red, "Invalid config"
-        console.log "Player #{game.winner()}:".yellow
-        console.log configs[game.winner()]
-        process.exit 1
-
-    gameLoop = ->
-
-        if game.over()
-            console.log "Game over! Winner: #{game.winner()}"
-            game.debugPrint()
-            process.exit 0
-        else
-            data = runBot bots[game.player()]
-            move = JSON.parse data
-
-            who = if game.player() is 0 then "local".green else "random".blue
-            console.log "Bot", who, "plays: #{data}"
-
-            game.play move
-
-            gameLoop()
-
-    gameLoop()
-=======
+    
     config0 = parseJSON runBot(bots[0]), "local"
     config1 = parseJSON runBot(bots[1]), "random"
 
@@ -121,7 +84,6 @@ simulate = ->
     console.log "Game over! Winner: #{game.winner()}"
     game._print()
     process.exit 0
->>>>>>> pr/1
 
 if program.norefresh
     simulate()
