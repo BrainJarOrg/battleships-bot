@@ -10,4 +10,4 @@
 #   ruby            ex. 'ruby bot.rb $1'
 #   PHP             ex. 'php bot.php $1'
 
-coffee bot.coffee $1
+python bot.py $1
