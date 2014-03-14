@@ -59,7 +59,8 @@ simulate = ->
     error = game.setup(config0, config1)
     if error
         console.log "ERROR".red, "Invalid config"
-        console.log "Player #{game.winner()}".yellow
+        who = if game.player() is 1 then "<your bot>".green else "<training bot>".blue
+        console.log "Bot #{who}".yellow
         console.log error
         process.exit 1
 
@@ -67,7 +68,7 @@ simulate = ->
 
         game._print()
 
-        who = if game.player() is 0 then "local".green else "random".blue
+        who = if game.player() is 0 then "<your bot>".green else "<training bot>".blue
 
         data = runBot bots[game.player()]
         move = parseJSON data, who

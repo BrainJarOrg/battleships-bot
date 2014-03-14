@@ -9,7 +9,7 @@ state = JSON.parse process.argv.slice(2)
 
 
 rand = (n) ->
-  Math.round(Math.random()*n)
+  (Math.floor(Math.random()*100000 + new Date().getTime()) % n)
 
 randomMove = ->
   "#{rand(7)}#{rand(7)}"
@@ -18,10 +18,10 @@ if state.cmd is 'init'
   diff = 0
   config = {}
   for i in [2..5]
-    diff = diff + 1 + rand(1)
     config[i] =
       point: "#{rand(7-i)}#{diff}"
       orientation: "horizontal"
+    diff = diff + 1 + rand(1)
   console.log JSON.stringify config
 
 else
