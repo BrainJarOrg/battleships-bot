@@ -9,7 +9,7 @@ state = JSON.parse process.argv.slice(2)
 
 
 rand = (n) ->
-  (Math.random(Math.random()*100000 + new Date().getTime()) % n)
+  Math.floor(Math.random()*100000 + new Date().getTime()) % (n+1)
 
 randomMove = ->
   "#{rand(7)}#{rand(7)}"
