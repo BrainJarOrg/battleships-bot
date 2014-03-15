@@ -38,6 +38,9 @@ parseJSON = (data, player) ->
         process.exit 1
     config
 
+who = (num) ->
+    if num is 0 then "<your bot>".green else "<training bot>".blue
+
 simulate = ->
 
     Battleships = require "./#{path_battleships}"
@@ -59,8 +62,7 @@ simulate = ->
     error = game.setup(config0, config1)
     if error
         console.log "ERROR".red, "Invalid config"
-        who = if game.player() is 1 then "<your bot>".green else "<training bot>".blue
-        console.log "Bot #{who}".yellow
+        console.log "Bot #{who(game.player())}".yellow
         console.log error
         process.exit 1
 
@@ -68,21 +70,22 @@ simulate = ->
 
         game._print()
 
-        who = if game.player() is 0 then "<your bot>".green else "<training bot>".blue
-
         data = runBot bots[game.player()]
         move = parseJSON data, who
 
-        console.log "Bot", who, "plays: #{data}"
+        bot = who(game.player())
+        console.log "Bot #{bot} plays: #{data}"
 
         error = game.play move
         if error
             console.log "ERROR".red, "Invalid move"
-            console.log "Player #{who}".yellow
+            console.log "Player #{bot}".yellow
             console.log error
             process.exit 1
 
-    console.log "Game over! Winner: #{game.winner()}"
+    console.log 
+    console.log "Game over!".red
+    console.log "Winner: #{who(game.winner())}"
     game._print()
     process.exit 0
 
