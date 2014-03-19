@@ -2,6 +2,8 @@ import json
 import random
 import sys
 
+import prob
+
 
 class Placement(object):
 
@@ -62,7 +64,7 @@ HIT = -5
 
 class Bot(object):
 
-    def __init__(self, ai='dumb_bot'):
+    def __init__(self, ai='smarter_bot'):
         self.play = getattr(self, ai)
         random.seed()
         #self.log = open('play.log', 'a')
@@ -176,6 +178,11 @@ class Bot(object):
         move = {'move': self.random_move()}
         if self.max_value() > 0:
             move = {'move': self.max_move()}
+        print json.dumps(move)
+
+    def smarter_bot(self, state):
+        bot = prob.Probability(state)
+        move = {'move': bot.getMaxMove()}
         print json.dumps(move)
 
 if __name__ == "__main__":
