@@ -78,6 +78,18 @@ You can code however you like as long as you follow the rules below. Third-party
 
 Please note that if you violate any of these, your bot will just keep getting beaten up. Be nice to your bot.
 
+
+
+### 5. FIGHT !
+
+Register your bot at https://www.brainjar.org/profile/battleships
+
+And that's it! Now click on fight to see who's better !
+
+__Before each fight, we will git pull the code from the master branch, no need to do anything___
+
+
+
 ## HOWTO
 
 ### run.sh
